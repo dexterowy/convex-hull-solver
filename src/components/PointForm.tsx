@@ -32,12 +32,19 @@ export const PointForm = (props: Props) => {
       </div>
       <button
         className="p-2 my-2 bg-slate-50/10 hover:bg-slate-50/20 hover:cursor-pointer w-full"
-        onClick={() =>
-          props.onSave({
-            x: Number(x),
-            y: Number(y),
-          })
-        }
+        onClick={() => {
+          try {
+            if (!x || !y) throw new Error("Invalid input");
+            if (isNaN(Number(x)) || isNaN(Number(y)))
+              throw new Error("Invalid input");
+            props.onSave({
+              x: Number(x),
+              y: Number(y),
+            });
+          } catch (err) {
+            alert("Invalid input");
+          }
+        }}
       >
         SAVE
       </button>
