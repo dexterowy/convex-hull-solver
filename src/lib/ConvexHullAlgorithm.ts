@@ -41,6 +41,7 @@ export class ConvexHullAlgorithm {
       while (lowerHull.length >= 2) {
         const q: Point = lowerHull[lowerHull.length - 1];
         const r: Point = lowerHull[lowerHull.length - 2];
+        // 
         if ((q.x - r.x) * (p.y - r.y) >= (q.y - r.y) * (p.x - r.x))
           lowerHull.pop();
         else break;

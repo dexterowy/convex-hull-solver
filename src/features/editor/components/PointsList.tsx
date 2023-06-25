@@ -72,6 +72,13 @@ const PointsList = (props: Props) => {
       <div className="flex-grow" />
       <div className="w-full border-slate-400 border-2 rounded-sm p-4 text-center font-bold ">
         <span className=" ">{recognizedHull}</span>
+        <div>
+          {props.hull.slice(0, -1).map((point, index) => (
+            <span key={index} className="text-blue-500">
+              {` (${point.x}, ${point.y})`}
+            </span>
+          ))}
+        </div>
       </div>
 
       <div className="flex-grow" />
