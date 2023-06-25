@@ -84,8 +84,9 @@ const PointsList = (props: Props) => {
       <div className="flex-grow" />
       <footer className="py-2">
         <h3 className="text-sm">
-          Created by <br />
-          Hubert Olszewski & Mateusz Szczotarz
+          Created by: <br />
+          Hubert Olszewski <br /> Mateusz Szczotarz <br />
+          Damian Rożek
         </h3>
       </footer>
     </aside>
